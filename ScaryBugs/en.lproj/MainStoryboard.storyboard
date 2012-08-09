@@ -112,6 +112,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="26"/>
+                    <connections>
+                        <outlet property="imageField" destination="1kJ-AY-17x" id="dh4-iB-hzm"/>
+                        <outlet property="imageView" destination="1kJ-AY-17x" id="Jeh-af-lkd"/>
+                        <outlet property="rateView" destination="1kJ-AY-17x" id="Cj3-js-vgF"/>
+                        <outlet property="titleField" destination="FrX-j9-iVr" id="ymg-oB-0ey"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="902" y="64"/>
@@ -122,6 +128,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="rateView" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="MasterViewController" superclassName="UITableViewController">

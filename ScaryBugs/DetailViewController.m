@@ -16,6 +16,11 @@
 
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize titleField = _titleField;
+@synthesize imageView = _imageView;
+@synthesize rateView = _rateView;
+@synthesize imageField = _imageField;
+@synthesize rateView = _rateView;
 
 #pragma mark - Managing the detail item
 
@@ -47,6 +52,11 @@
 
 - (void)viewDidUnload
 {
+    [self setTitleField:nil];
+    [self setImageField:nil];
+    [self setRateView:nil];
+    [self setImageView:nil];
+    [self setRateView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     self.detailDescriptionLabel = nil;
