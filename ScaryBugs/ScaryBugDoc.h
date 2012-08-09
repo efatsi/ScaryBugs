@@ -18,5 +18,4 @@
 
 - (id)initWithTitle:(NSString*)title rating:(float)rating thumbImage:(UIImage *)thumbImage fullImage:(UIImage *)fullImage;
 
-
 @end

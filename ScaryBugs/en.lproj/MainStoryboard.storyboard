@@ -50,7 +50,7 @@
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="21" kind="push" id="rHR-bA-57F"/>
+                                    <segue destination="21" kind="push" id="GNC-ou-4cj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -86,16 +86,20 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <connections>
+                                    <action selector="titleFieldTextChanged:" destination="21" eventType="editingChanged" id="prz-fk-noK"/>
+                                    <outlet property="delegate" destination="21" id="YNm-ss-cb1"/>
+                                </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="eIF-6l-OPH">
-                                <rect key="frame" x="20" y="59" width="280" height="268"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" id="vDa-Cy-tGw" customClass="RateView">
+                            <view contentMode="scaleToFill" id="60F-X9-ay7" customClass="RateView">
                                 <rect key="frame" x="20" y="335" width="280" height="61"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="eIF-6l-OPH">
+                                <rect key="frame" x="20" y="59" width="280" height="268"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1kJ-AY-17x">
                                 <rect key="frame" x="20" y="60" width="280" height="268"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,6 +111,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPictureTapped:" destination="21" eventType="touchUpInside" id="ebF-gm-CDr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -114,9 +121,9 @@
                     <navigationItem key="navigationItem" title="Detail" id="26"/>
                     <connections>
                         <outlet property="imageField" destination="1kJ-AY-17x" id="dh4-iB-hzm"/>
-                        <outlet property="imageView" destination="1kJ-AY-17x" id="Jeh-af-lkd"/>
-                        <outlet property="rateView" destination="1kJ-AY-17x" id="Cj3-js-vgF"/>
-                        <outlet property="titleField" destination="FrX-j9-iVr" id="ymg-oB-0ey"/>
+                        <outlet property="imageView" destination="eIF-6l-OPH" id="kbS-3t-Opl"/>
+                        <outlet property="rateView" destination="60F-X9-ay7" id="kdn-wL-d6l"/>
+                        <outlet property="titleField" destination="FrX-j9-iVr" id="3zP-xW-xa5"/>
                     </connections>
                 </viewController>
             </objects>
@@ -127,9 +134,11 @@
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="addPictureTapped:"/>
+                <relationship kind="action" name="titleFieldTextChanged:"/>
                 <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="rateView" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="rateView" candidateClass="RateView"/>
                 <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
             </relationships>
         </class>
