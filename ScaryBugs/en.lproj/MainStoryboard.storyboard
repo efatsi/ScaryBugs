@@ -120,7 +120,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="26"/>
                     <connections>
-                        <outlet property="imageField" destination="1kJ-AY-17x" id="dh4-iB-hzm"/>
                         <outlet property="imageView" destination="eIF-6l-OPH" id="kbS-3t-Opl"/>
                         <outlet property="rateView" destination="60F-X9-ay7" id="kdn-wL-d6l"/>
                         <outlet property="titleField" destination="FrX-j9-iVr" id="3zP-xW-xa5"/>
